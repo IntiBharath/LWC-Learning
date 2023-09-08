@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="getPicklistValuesDemo">
+        <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedIndustry}
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {selectedIndustry}</p>
+
+    </lightning-card>
+</template>

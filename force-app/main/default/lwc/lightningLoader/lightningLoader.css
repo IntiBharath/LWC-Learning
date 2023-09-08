@@ -1,0 +1,9 @@
+.loader::after{
+    position: absolute;
+    content: attr(data-text);
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    top: calc(50%+ 1.5rem)
+
+}

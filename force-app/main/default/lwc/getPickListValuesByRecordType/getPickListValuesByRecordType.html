@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="getPicklistValuesByRecordType">
+        <lightning-combobox
+            name="Rating"
+            label="Rating"
+            value={selectedRating}
+            placeholder="Select Rating"
+            options={ratingOptions}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {selectedRating}</p>
+
+    <lightning-combobox
+            name="Type"
+            label="Type"
+            value={selectedType}
+            placeholder="Select Type"
+            options={typeOptions}
+            onchange={typeChange} ></lightning-combobox>
+
+    <p>Selected value is: {selectedType}</p>
+    </lightning-card>
+    
+</template>

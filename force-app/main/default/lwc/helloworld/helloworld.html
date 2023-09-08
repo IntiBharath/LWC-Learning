@@ -1,0 +1,24 @@
+<template>
+      <lightning-card  title="TwoWay DataBinding">
+        <div class="slds-m-around_medium">
+        <lightning-input type="text" label="Enter City Name" onkeyup={changeHandler}></lightning-input>
+        <p>{fullName} lives in {city}</p>
+        </div>
+    </lightning-card>
+    
+    <lightning-card  title="@Track Property">
+      <div class="slds-m-around_medium">
+      <lightning-input type="text" label="Enter Area" onkeyup={trackHandler}></lightning-input>
+      <p>{Address.area} is my Area</p>
+      </div>
+  </lightning-card>
+
+  <lightning-card  title="Getter Property">
+  <div class="slds-m-around_medium">
+  <p>{userList}</p>
+  <lightning-input type="text" label="Enter Num1" onkeyup={firstNumber}></lightning-input>
+  <lightning-input type="text" label="Enter Num2" onkeyup={secondNumber}></lightning-input>
+  <p>{multiplyNum}</p>
+  </div>
+   </lightning-card>
+  </template>

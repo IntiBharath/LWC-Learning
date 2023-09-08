@@ -1,0 +1,38 @@
+ <template>
+    <lightning-card title="Quiz App In Lwc">
+    <div class="slds-m-around_medium">
+        <template if:true={isSubmitted}>
+        <div class={isSocredFull}>You have selected {selectedCorrectAns} out of {questionContainer.length} correct ans</div>
+        </template>
+     <form>
+        <template for:each={questionContainer} for:item="ques">
+            <div key={ques.id}>
+                <div><strong>{ques.id} - {ques.question}</strong></div>
+                <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                    <div class="slds-col">
+                       <input type="radio" name={ques.id} value="a" onclick={changeHandler}>
+                       {ques.answers.a}
+                    </div>
+                    <div class="slds-col">
+                        <input type="radio" name={ques.id} value="b" onclick={changeHandler}>
+                        {ques.answers.b}
+                    </div>
+                    <div class="slds-col">
+                        <input type="radio" name={ques.id} value="c" onclick={changeHandler}>
+                        {ques.answers.c}
+                    </div>
+                    <div class="slds-col">
+                        <input type="radio" name={ques.id} value="d" onclick={changeHandler}>
+                        {ques.answers.d}
+                    </div>
+                </div>
+            </div>
+        </template>
+        <lightning-button variant="brand" type="submit" label="Submit" disabled={allNotSelected} onclick={submitHandler} class="slds-m-left_small"></lightning-button>
+        <lightning-button variant="brand" type="reset" label="Reset" onclick={resetHandler} class="slds-m-left_small"></lightning-button>
+
+    </form>
+    </div>
+    </lightning-card>
+    
+</template>

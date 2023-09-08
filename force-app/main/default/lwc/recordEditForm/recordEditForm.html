@@ -1,0 +1,29 @@
+<!--The simplest way to create a form that enables you to edit a record is to use lightning-record-form. 
+    To customize the form layout or preload custom values, use lightning-record-edit-form.
+-->
+
+<template>
+    <lightning-card title="Lightning Record Edit Form">
+       <lightning-record-edit-form 
+       object-api-name={objectName}
+       record-id="0035j00000IP8MgAAL"
+       >
+       <lightning-messages></lightning-messages> <!--To handle the errors during for submission-->
+       <div class="slds-grid">
+          <div class="slds-size_1-of-2">
+            <lightning-input-field field-name={fields.Name}></lightning-input-field>
+            <lightning-input-field field-name={fields.title}></lightning-input-field>
+          </div>
+          <div class="slds-size_1-of-2">
+            <lightning-input-field field-name={fields.Account}></lightning-input-field>
+            <div class="slds-p-left_x-small">Enter your Email</div>
+            <lightning-input-field variant="label-hidden" field-name={fields.Email}></lightning-input-field>
+          </div>
+        </div> 
+        <lightning-button class="slds-m-around_xx-small" label="Cancel" onclick={handleReset}></lightning-button>
+        <lightning-button class="slds-m-around_xx-small" label="Create Contact" type="submit" variant="brand" ></lightning-button>
+       </lightning-record-edit-form>
+
+    </lightning-card>
+    
+</template>

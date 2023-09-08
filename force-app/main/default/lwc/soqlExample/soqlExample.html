@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="AccountList">
+     <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={accounts} for:item="acc">
+                <tr key={acc.Id}>
+                   <td>{acc.Id}</td>
+                   <td>{acc.Name}</td>
+                   <td>{acc.Phone}</td> 
+                </tr>
+            </template>
+        </tbody>
+     </table>
+    </lightning-card>
+</template>

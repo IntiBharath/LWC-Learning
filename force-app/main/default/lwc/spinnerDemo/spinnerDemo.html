@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Reusable Spinner Demo">
+     <lightning-button label="Spinner" variant="brand" onclick={spinnerOneHandler} name="showOne"></lightning-button>
+     <p>Some text 1</p>
+     <p>Some text 1</p>
+     <p>Some text 1</p>
+     <p>Some text 1</p>
+     <p>Some text 1</p>
+     <template if:true={showOne}>
+        <c-lightning-loader spinner-text="Hey I am Bharath" size="Large" variant="brand"></c-lightning-loader>
+     </template>
+    </lightning-card>
+
+    <lightning-card title="Reusable Spinner Demo">
+        <lightning-button label="Spinner" variant="brand" onclick={spinnerOneHandler} name="showTwo"></lightning-button>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <template if:true={showTwo}>
+           <c-lightning-loader spinner-text="Hey I am Bharath" size="medium" variant="band"></c-lightning-loader>
+        </template>
+       </lightning-card>
+
+       <lightning-card title="Reusable Spinner Demo">
+        <lightning-button label="Spinner" variant="brand" onclick={spinnerOneHandler} name="showThree"></lightning-button>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <p>Some text 1</p>
+        <template if:true={showThree}>
+           <c-lightning-loader spinner-text="Hey I am Bharath" size="small" variant="inverse"></c-lightning-loader>
+        </template>
+       </lightning-card>
+    
+</template>

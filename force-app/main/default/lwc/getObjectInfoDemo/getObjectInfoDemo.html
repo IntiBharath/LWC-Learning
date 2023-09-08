@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="getObjectInfoDemo as WireFunction">
+        <template if:true={defaultRecordTypeId}>
+            <div> RecordTypeId - {defaultRecordTypeId}</div>
+            <div> APIName - {apiName}</div>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="getObjectInfoDemo as WireProperty">
+        <template if:true={objectContent.data}>
+        <div> RecordTypeId - {objectContent.data.defaultRecordTypeId}</div>
+        <div> APIName - {objectContent.data.apiName}</div>
+        </template>
+    </lightning-card> 
+</template>

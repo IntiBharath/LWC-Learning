@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="Lightning Edit form with Custom error messages">
+    <lightning-record-edit-form
+    object-api-name="Account"
+    onsubmit={submitHandler}
+    onsuccess={successHandler}
+    onerror={errorHandler}> <!-- onerror - to handle server errors-->
+
+    <lightning-input label="Name" value={inputName} onkeyup={inputHandler} class="slds-m-bottom_small"></lightning-input>
+
+    <lightning-button label="Create Account" type="submit" class="slds-m-top_small"></lightning-button>
+
+    </lightning-record-edit-form>
+</Lightning-card>
+    
+</template>

@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Filtering Component">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input label="Filter" type="text" onkeyup={filterHandler}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+      <div class="slds-m-around_medium">
+       <table>
+        <thead>
+          <tr>
+            <template for:each={headings} for:item="heading">
+              <th key={heading}>{heading}</th>
+            </template>
+          </tr>
+        </thead>
+        <tbody>
+         <template for:each={filteredTableData} for:item="data">
+            <tr key={data.Id}>
+                <td>{data.Id}</td>
+                <td>{data.FirstName}</td>
+                <td>{data.LastName}</td>
+                 <td>{data.Email}</td>  
+                 <td>{data.Title}</td> 
+            </tr>
+         </template>
+        </tbody>
+        
+
+       </table>
+      </div>
+    </lightning-card>
+    
+</template>

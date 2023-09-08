@@ -1,0 +1,10 @@
+div{
+    color: var(--lwc-brandAccessible);
+    background-color: var(--lwc-colorBackgroundAlt);
+}
+
+h2{
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--lwc-colorBorder);
+}

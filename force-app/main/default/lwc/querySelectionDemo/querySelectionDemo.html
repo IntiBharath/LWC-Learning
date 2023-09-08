@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="QuerySelectionDemo">
+    <div class="slds-m-around_medium">
+        <lightning-button label="Show me" onclick={passHandler}></lightning-button>
+        <p>Hello World, I am yet to load my life completely</p>           
+              <template for:each={userList} for:item="user">
+                <div class="name" key={user}>{user}</div>
+              </template>
+              <div class="child" lwc:dom="manual">
+
+              </div>
+    </div> 
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Slot Demo Passing data from Parent to child">
+        <div class="slds-p-around_medium">
+        <c-slot-child-Demo>
+            <p slot="first" class="slds-text-color_success">My name is Bharath</p>
+            <p slot="Second" class="slds-text-color_error">I live in Hyd</p>
+            <p slot="footer">This is a footer</p>
+        </c-slot-child-Demo>
+        </div>
+    </lightning-card>
+    <div class="slds-m-around_medium"></div>
+
+    <lightning-card title="Slot Demo Passing data from Parent to child">
+        <div class="slds-p-around_medium">
+        <c-slot-child-Demo>
+            <p slot="first" class="slds-text-color_success">My name is Bharath</p>
+            <p slot="Second" class="slds-text-color_error">I live in Hyd</p>
+           <!-- <p slot="footer">This is a footer</p> -->
+        </c-slot-child-Demo>
+        </div>
+    </lightning-card>
+    
+</template>
